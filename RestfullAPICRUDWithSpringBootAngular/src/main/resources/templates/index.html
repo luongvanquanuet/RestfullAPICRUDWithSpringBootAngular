@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>	
+		<title>Employee Management System</title>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script> -->
+		<script th:src="@{/angular.min.js}"></script>
+		<script th:src="@{/main.js}"></script>
+		<link th:href="@{/main.css}" rel="stylesheet"/>
+	</head>
+	<body ng-app="EmployeeManagement" ng-controller="EmployeeController" class="body">
+		<h1>
+		REST API WITH SPRINGBOOT
+		</h1>
+		<form ng-submit="submitEmployee()">
+			<table border="0" class="form">
+				<tr>
+					<th>Emp Id</th>
+					<td>{{employeeForm.empId}}</td>
+				</tr>
+				<tr>
+					<th>Emp No</th>
+					<td><input type="text" ng-model="employeeForm.empNo" /></td>
+				</tr>
+				<tr>
+					<th>Emp Name</th>
+					<td><input type="text" ng-model="employeeForm.empName" /></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" value="Submit" class="blue-button" />
+					</td>
+				</tr>
+			</table>
+		</form>
+		<br/>
+		<a class="create-button" ng-click="createEmployee()">Create Employee</a>
+		<table border="1" class="table">
+			<tr>
+				<th>Emp Id</th>
+				<th>Emp No</th>
+				<th>Emp Name</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
+			<tr ng-repeat="employee in employees">
+				<td> {{ employee.empId }}</td>
+				<td> {{ employee.empNo }}</td>
+				<td>{{ employee.empName }}</td>
+				<td>
+				<!-- <a ng-click="editEmployee(employee)" class="edit-button">Edit</a> -->
+				<a ng-click="editEmployee(employee)" class="edit-button">Edit</a>
+				</td>
+				<td>
+				<a ng-click="deleteEmployee(employee)" class="delete-button">Delete</a>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

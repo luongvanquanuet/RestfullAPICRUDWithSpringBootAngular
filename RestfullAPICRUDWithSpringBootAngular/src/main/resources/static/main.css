@@ -1,0 +1,77 @@
+table{
+	border-collapse: collapse;
+}
+table td, th{
+	padding: 5px;
+}
+.create-button{
+	color:bule;
+	cursor:pointer;
+	padding:5px;
+}
+.edit-button{
+	padding: 2px 5px;
+	background: #25A6E1;
+	color:#FFFFFF;
+	cursor: pointer;
+}
+.delete-button{
+	padding: 2px 5px;
+	background: #f44336;
+	color:#FFFFFF;
+	cursor: pointer; 
+}
+.create-button{
+	padding: 2px 5px;
+	background: #800080;
+	color:#FFFFFF;
+	cursor: pointer; 
+}
+h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  background-color: currentcolor;
+  padding: 15px;
+}
+.blue-button{
+	  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 2px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  margin: 1px 0,5px;
+  cursor: pointer;
+  border-radius: 40%;
+}
+table, th, td{
+            border:1px solid #868585;
+        }
+        table{
+            border-collapse:collapse;
+            width:130%;
+        }
+        th, td{
+            text-align:center;
+            padding:10px;
+        }
+        table tr:nth-child(odd){
+            background-color:#eee;
+        }
+        table tr:nth-child(even){
+            background-color:white;
+        }
+        table tr:nth-child(1){
+            background-color:skyblue;
+        }
+.body{
+	margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+	
+}
